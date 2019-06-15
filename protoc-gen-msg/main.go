@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"bytes"
+
 	"github.com/davyxu/golog"
 	"github.com/davyxu/pbmeta"
 	"github.com/gogo/protobuf/proto"
@@ -18,7 +19,7 @@ func main() {
 
 	var errBuffer bytes.Buffer
 
-	golog.SetOutput("main", &errBuffer)
+	_ = golog.SetOutput("main", &errBuffer)
 
 	var Request plugin.CodeGeneratorRequest   // The input.
 	var Response plugin.CodeGeneratorResponse // The output.
@@ -33,7 +34,7 @@ func main() {
 		// 发回处理结果
 		data, _ := proto.Marshal(&Response)
 
-		os.Stdout.Write(data)
+		_, _ = os.Stdout.Write(data)
 
 	}()
 

@@ -8,7 +8,6 @@ import (
 	"go/token"
 	"text/template"
 
-	"github.com/davyxu/cellnet/util"
 	"github.com/davyxu/pbmeta"
 )
 
@@ -43,10 +42,12 @@ type msgModel struct {
 	*pbmeta.Descriptor
 
 	parent *pbmeta.FileDescriptor
+
+	MsgId uint16
 }
 
-func (self *msgModel) MsgID() int {
-	return int(util.StringHash(self.FullName()))
+func (self *msgModel) MsgID() uint16 {
+	return self.MsgId
 }
 
 func (self *msgModel) FullName() string {
@@ -83,7 +84,9 @@ func printFile(pool *pbmeta.DescriptorPool) (string, bool) {
 
 	var model fileModel
 	model.PackageName = pool.File(0).PackageName()
-
+	if model.PackageName == "" {
+		model.PackageName = "gamePB"
+	}
 	for f := 0; f < pool.FileCount(); f++ {
 
 		file := pool.File(f)
@@ -95,12 +98,15 @@ func printFile(pool *pbmeta.DescriptorPool) (string, bool) {
 		for m := 0; m < file.MessageCount(); m++ {
 
 			d := file.Message(m)
-
-			pm.Messages = append(pm.Messages, &msgModel{
-				Descriptor: d,
-				parent:     file,
-			})
-
+			msgIDDesc := d.EnumValueByName("ID")
+			if msgIDDesc != nil {
+				msgID := msgIDDesc.Value()
+				pm.Messages = append(pm.Messages, &msgModel{
+					Descriptor: d,
+					parent:     file,
+					MsgId:      uint16(msgID),
+				})
+			}
 		}
 
 		model.TotalMessages += file.MessageCount()
