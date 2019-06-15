@@ -19,10 +19,10 @@ package {{.PackageName}}
 
 {{if gt .TotalMessages 0}}
 import (
-	"github.com/davyxu/cellnet"
+	"github.com/FJSDS/cellnet"
 	"reflect"
-	_ "github.com/davyxu/cellnet/codec/gogopb"
-	"github.com/davyxu/cellnet/codec"
+	_ "github.com/FJSDS/cellnet/codec/gogopb"
+	"github.com/FJSDS/cellnet/codec"
 )
 {{end}}
 

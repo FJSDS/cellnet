@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/codec"
-	"github.com/davyxu/cellnet/util"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/codec"
+	"github.com/FJSDS/cellnet/util"
 	"reflect"
 )
 

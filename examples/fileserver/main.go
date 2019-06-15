@@ -3,11 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/peer"
-	_ "github.com/davyxu/cellnet/peer/http"
-	"github.com/davyxu/cellnet/proc"
-	_ "github.com/davyxu/cellnet/proc/http"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/peer"
+	_ "github.com/FJSDS/cellnet/peer/http"
+	"github.com/FJSDS/cellnet/proc"
+	_ "github.com/FJSDS/cellnet/proc/http"
 )
 
 var shareDir = flag.String("share", ".", "folder to share")

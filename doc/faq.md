@@ -5,7 +5,7 @@
     这是由于需要的peer没有找到或者没有注册，使用cellnet内建的peer请在main入口这样导入包
 ```
     import (
-        _ "github.com/davyxu/cellnet/peer/tcp"
+        _ "github.com/FJSDS/cellnet/peer/tcp"
     )
 ```
 
@@ -14,7 +14,7 @@
     这是由于需要的processor没有找到或者没有注册，使用cellnet内建的processor请在main入口这样导入包
 ```
     import (
-        _ "github.com/davyxu/cellnet/proc/tcp"
+        _ "github.com/FJSDS/cellnet/proc/tcp"
     )
 ```
 

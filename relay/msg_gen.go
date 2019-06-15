@@ -3,9 +3,9 @@
 package relay
 
 import (
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/codec"
-	_ "github.com/davyxu/cellnet/codec/protoplus"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/codec"
+	_ "github.com/FJSDS/cellnet/codec/protoplus"
 	"github.com/davyxu/protoplus/proto"
 	"reflect"
 	"unsafe"

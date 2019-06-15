@@ -1,10 +1,10 @@
 package tests
 
 import (
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/peer"
-	"github.com/davyxu/cellnet/proc"
-	"github.com/davyxu/cellnet/rpc"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/peer"
+	"github.com/FJSDS/cellnet/proc"
+	"github.com/FJSDS/cellnet/rpc"
 	"testing"
 	"time"
 )

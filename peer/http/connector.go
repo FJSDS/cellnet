@@ -2,9 +2,9 @@ package http
 
 import (
 	"fmt"
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/codec"
-	"github.com/davyxu/cellnet/peer"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/codec"
+	"github.com/FJSDS/cellnet/peer"
 	"io"
 	"net/http"
 	"reflect"

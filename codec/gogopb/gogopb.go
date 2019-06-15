@@ -1,8 +1,8 @@
 package gogopb
 
 import (
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/codec"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/codec"
 	"github.com/gogo/protobuf/proto"
 )
 

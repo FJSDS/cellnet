@@ -2,7 +2,7 @@ package msglog
 
 import (
 	"errors"
-	"github.com/davyxu/cellnet"
+	"github.com/FJSDS/cellnet"
 	"sync"
 )
 

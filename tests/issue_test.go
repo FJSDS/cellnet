@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/peer"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/peer"
 	"sync"
 	"testing"
 )

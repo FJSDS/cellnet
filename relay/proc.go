@@ -1,9 +1,9 @@
 package relay
 
 import (
-	"github.com/davyxu/cellnet"
-	"github.com/davyxu/cellnet/codec"
-	"github.com/davyxu/cellnet/msglog"
+	"github.com/FJSDS/cellnet"
+	"github.com/FJSDS/cellnet/codec"
+	"github.com/FJSDS/cellnet/msglog"
 )
 
 type PassthroughContent struct {
