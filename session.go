@@ -46,3 +46,12 @@ func (self *RawPacket) Message() interface{} {
 
 	return msg
 }
+
+type IntPacket struct {
+	IntValue int32
+	Msg interface{}
+}
+
+func (self *IntPacket) Message() interface{} {
+	return self.Msg
+}

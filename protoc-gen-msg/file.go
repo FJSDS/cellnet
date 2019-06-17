@@ -19,10 +19,11 @@ package {{.PackageName}}
 
 {{if gt .TotalMessages 0}}
 import (
-	"github.com/FJSDS/cellnet"
 	"reflect"
-	_ "github.com/FJSDS/cellnet/codec/gogopb"
+
+	"github.com/FJSDS/cellnet"
 	"github.com/FJSDS/cellnet/codec"
+	_ "github.com/FJSDS/cellnet/codec/gogopb"
 )
 {{end}}
 
@@ -116,7 +117,9 @@ func printFile(pool *pbmeta.DescriptorPool) (string, bool) {
 	}
 
 	var bf bytes.Buffer
-
+	if len(model.Protos)==0{
+		return "",true
+	}
 	err = tpl.Execute(&bf, &model)
 	if err != nil {
 		log.Errorln(err)
